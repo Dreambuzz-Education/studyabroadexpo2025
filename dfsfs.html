@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DreamBuzz Study Abroad Expo 2025</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset and basic */
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+body {background: #f7f9fc; color:#222; overflow-x:hidden;}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top:0;
+  width:100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  z-index: 999;
+  padding:12px 20px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+nav a {
+  text-decoration:none; color:#007bff; font-weight:600; transition:0.3s;
+}
+nav a:hover {color:#00c3ff;}
+
+/* Header */
+header {
+  text-align:center;
+  padding:40px 20px 80px;
+  background: linear-gradient(135deg, #ffffff, #f0f8ff);
+  position:relative;
+  overflow:hidden;
+}
+
+header img {
+  max-width:60%;
+  border-radius:5px;
+  margin-bottom:5px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size:3rem;
+  font-weight:700;
+  background: linear-gradient(90deg,#007bff,#00bcd4);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:12px;
+}
+
+p.tagline {font-size:1.3rem; margin-bottom:35px; color:#333;}
+
+.btn-group {display:flex; justify-content:center; gap:15px; flex-wrap:wrap;}
+.btn {
+  text-decoration:none;
+  padding:12px 30px;
+  border-radius:30px;
+  font-weight:600;
+  background: linear-gradient(135deg,#007bff,#00c3ff);
+  color:#fff;
+  box-shadow:0 5px 15px rgba(0,123,255,0.3);
+  transition:0.3s;
+}
+.btn:hover {transform:translateY(-4px); box-shadow:0 8px 25px rgba(0,123,255,0.4);}
+
+/* Sections */
+section {
+  max-width:1000px;
+  margin:70px auto;
+  border-radius:20px;
+  padding:50px 40px;
+  background:#fff;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+section:hover {transform:translateY(-5px); box-shadow:0 10px 30px rgba(0,0,0,0.08);}
+section:nth-child(even){background:#f0f4ff;}
+
+section h2 {
+  font-size:2rem;
+  text-align:center;
+  background: linear-gradient(90deg,#007bff,#00c3ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:25px;
+}
+section h2::after {
+  content:"";
+  display:block;
+  width:60px;
+  height:3px;
+  background:linear-gradient(90deg,#007bff,#00c3ff);
+  margin:10px auto 0;
+  border-radius:2px;
+}
+
+.details p, ul li {font-size:1.05rem; line-height:1.8; color:#333;}
+ul {list-style:none; padding-left:10px;}
+ul li {margin-bottom:12px; padding-left:10px; position:relative;}
+ul li::before {content:"\f00c"; font-family:"Font Awesome 6 Free"; font-weight:900; color:#00c3ff; position:absolute; left:-18px;}
+
+/* Video grid */
+.video-container {display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:25px;}
+iframe {border-radius:15px; width:100%; height:320px; border:none; box-shadow:0 6px 20px rgba(0,0,0,0.08); transition:0.3s;}
+iframe:hover {transform:scale(1.03); box-shadow:0 10px 30px rgba(0,123,255,0.25);}
+iframe.form {height:900px; margin-top:10px;}
+
+/* About text */
+.about {font-size:1.05rem; line-height:1.8; text-align:justify; margin-top:15px;}
+
+/* Footer */
+footer {
+  background:#0a0a0a;
+  color:#eee;
+  padding:50px 20px;
+  text-align:center;
+  margin-top:60px;
+}
+footer a {color:#00c3ff; text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+
+/* Animated side bubbles */
+.bubble {
+  position:absolute;
+  border-radius:50%;
+  background: linear-gradient(135deg, #007bff, #00c3ff);
+  opacity:0.2;
+  animation: float 12s ease-in-out infinite;
+}
+.bubble:nth-child(1){width:100px;height:100px; top:10%; left:5%; animation-delay:0s;}
+.bubble:nth-child(2){width:150px;height:150px; top:70%; left:10%; animation-delay:2s;}
+.bubble:nth-child(3){width:80px;height:80px; top:40%; left:85%; animation-delay:4s;}
+.bubble:nth-child(4){width:120px;height:120px; top:20%; left:75%; animation-delay:6s;}
+@keyframes float {
+  0% {transform: translateY(0) rotate(0deg);}
+  50% {transform: translateY(-30px) rotate(45deg);}
+  100% {transform: translateY(0) rotate(0deg);}
+}
+
+/* Responsive */
+@media(max-width:768px){
+  h1{font-size:2.3rem;}
+  section{padding:30px 20px;}
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#details"><i class="fa fa-calendar"></i> Event Details</a>
+  <a href="#whyus"><i class="fa fa-check-circle"></i> Why Choose Us</a>
+  <a href="#videos"><i class="fa fa-video"></i> Videos</a>
+  <a href="#moreinfo"><i class="fa fa-info-circle"></i> More Info</a>
+  <a href="#googleform"><i class="fa fa-paper-plane"></i> Apply Now</a>
+</nav>
+
+<header>
+  <!-- Animated bubbles -->
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  <img src="G:\events\post\2cover.jpg" alt="DreamBuzz Expo Cover">
+  <h1>Dreambuzz Study Abroad </br>Expo 2025</h1>
+  <p class="tagline">Turn Your Study Abroad Dream Into Reality 🌏</p>
+  <div class="btn-group">
+    <a href="#googleform" class="btn"><i class="fa fa-book"></i> Book Your Free Assessment</a>
+    <a href="https://chat.whatsapp.com/EKATzTAQKyu4Y38QfRhWQL" target="_blank" class="btn"><i class="fa fa-whatsapp"></i> Join WhatsApp Community</a>
+  </div>
+</header>
+
+<section id="details">
+  <h2>📍 Event Details</h2>
+  <div class="details">
+    <p><strong>Date:</strong> 29 November 2025 (Saturday)</p>
+    <p><strong>Time:</strong> 10:00 AM - 5:00 PM</p>
+    <p><strong>Venue:</strong> F5-B (Lift 5), House 411, Road 29, New DOHS, Mohakhali, Dhaka-1206</p>
+    <p><strong>Entry Fee:</strong> Absolutely Free</p>
+    <p class="about">
+      DreamBuzz Study Abroad Expo 2025 brings together top universities, education experts, and career advisors
+      to help students achieve their dreams of studying abroad. Personalized guidance, scholarships, live sessions,
+      and networking make this a must-attend event!
+    </p>
+  </div>
+</section>
+
+<section id="whyus">
+  <h2>📌 Why Choose Dreambuzz Education?</h2>
+  <ul>
+    <li><i class="fa fa-graduation-cap"></i> Free Admission & Course Guidance</li>
+    <li><i class="fa fa-plane"></i> Fast & Hassle-Free Visa Processing</li>
+    <li><i class="fa fa-money-bill-wave"></i> Scholarship Assistance (Up to 50%)</li>
+    <li><i class="fa fa-user"></i> Personalized Career Counselling</li>
+    <li><i class="fa fa-users"></i> Trusted by Hundreds of Students Every Year</li>
+    <li><i class="fa fa-globe"></i> Expert Counsellors with Global Experience</li>
+    <li><i class="fa fa-handshake"></i> Strong University Partnerships Worldwide</li>
+    <li><i class="fa fa-comments"></i> Live Q&A with University Representatives</li>
+  </ul>
+</section>
+
+<section id="videos">
+  <h2>🎬 Watch Our Students’ Success Stories</h2>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/zDlfe6cJvjc" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/IoBaQ23FufY" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/xY5R9IzuJSo" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/834xSQmOZb8" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section id="moreinfo">
+  <h2>💡 More About The Expo</h2>
+  <p class="about">
+    Attendees will get guidance on choosing universities, courses, scholarships, and visas. Live presentations, student
+    testimonials, and networking with experts will provide actionable insights. This event is designed to make your
+    study abroad journey faster, easier, and more confident.
+  </p>
+</section>
+
+<section id="googleform">
+  <h2>📋 Apply Now & Get Free Consultation</h2>
+  <iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSeotJD16pHYjkOdQ1uQeBPUpTa2dp_8JBLi8j7Mcr9dn4Veog/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</section>
+
+<footer>
+  <p>📍 Location: House 411, Road 29, New DOHS, Mohakhali, Dhaka-1206</p>
+  <p>📞 Hotline: <a href="tel:+8801753622121">+880 1753-622-121</a></p>
+  <p>💬 WhatsApp: <a href="https://chat.whatsapp.com/EKATzTAQKyu4Y38QfRhWQL" target="_blank">Join Community</a></p>
+  <p>🌐 Website: <a href="https://dreambuzz-education.github.io/Australia_Education_Fest_2025/" target="_blank">dreambuzz-education.github.io</a></p>
+  <p>© 2025 DreamBuzz Education | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
